@@ -12,7 +12,7 @@ function processData(allRows) {
     if (!groupedData[provinsi]) {
       groupedData[provinsi] = { x: [], y: [] };
     }
-    groupedData[provinsi].x.push(row['Curah Hujan']);
+    groupedData[provinsi].x.push(row['Luas Panen']);
     groupedData[provinsi].y.push(row['Produksi']);
   });
 
@@ -29,10 +29,10 @@ function processData(allRows) {
 }
 
 function makePlotly(traces) {
-  const plotDiv = document.getElementById("scatter2");
+  const plotDiv = document.getElementById("scatter");
   const layout = {
-    title: { text: 'Hubungan Curah Hujan dengan Hasil Produksi di Pulau Sumatera (Tahun 1993-2020)' },
-    xaxis: { title: 'Curah Hujan' },
+    title: { text: 'Hubungan Luas Panen dengan Hasil Produksi di Pulau Sumatera (Tahun 1993-2020)' },
+    xaxis: { title: 'Luas Panen (ha)' },
     yaxis: { title: 'Produksi (ton)' }
   };
 

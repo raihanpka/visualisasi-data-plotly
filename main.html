@@ -3,11 +3,47 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-    <title>Project Akhir - GKV</title>
+    <script src="https://cdn.plot.ly/plotly-3.0.1.min.js" charset="utf-8"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js" charset="utf-8"></script>
+    <title>Project Visualisasi Data - GKV</title>
 </head>
 <body>
-    <div id="scatter"></div>
-    <script src="scatter-plot.js"></script>
+    <div id="line" style="width: 1000px; height: 700px; margin: 0 auto;"></div>
+    <br />
+    <br />
+    <div id="bar" style="width: 1000px; height: 700px; margin: 0 auto;"></div>
+    <br />
+    <br />
+    <div id="scatter" style="width: 1000px; height: 700px; margin: 0 auto;"></div>
+    <br />
+    <br />
+    <div id="scatter2" style="width: 1000px; height: 700px; margin: 0 auto;"></div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Load untuk line chart
+            const lineChart = document.createElement("script");
+            lineChart.src = "line-chart.js";
+            document.body.appendChild(lineChart);
+
+            lineChart.onload = function () {
+                const barChart = document.createElement("script");
+                barChart.src = "bar-chart.js";
+                document.body.appendChild(barChart);
+
+                barChart.onload = function () {
+                    const scatterPlot = document.createElement("script");
+                    scatterPlot.src = "scatter-plot.js";
+                    document.body.appendChild(scatterPlot);
+
+                    scatterPlot.onload = function () {
+                        const scatter2Script = document.createElement("script");
+                        scatter2Script.src = "scatter-plot2.js";
+                        document.body.appendChild(scatter2Script);
+                    };
+                };
+            };
+        });
+    </script>
 </body>
 </html>
