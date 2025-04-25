@@ -21,28 +21,25 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            // Load untuk line chart
-            const lineChart = document.createElement("script");
-            lineChart.src = "line-chart.js";
-            document.body.appendChild(lineChart);
+            const scripts = [
+            "line-chart.js",
+            "bar-chart.js",
+            "scatter-plot.js",
+            "scatter-plot2.js"
+            ];
 
-            lineChart.onload = function () {
-                const barChart = document.createElement("script");
-                barChart.src = "bar-chart.js";
-                document.body.appendChild(barChart);
+            function loadScript(index) {
+            if (index >= scripts.length) return;
 
-                barChart.onload = function () {
-                    const scatterPlot = document.createElement("script");
-                    scatterPlot.src = "scatter-plot.js";
-                    document.body.appendChild(scatterPlot);
-
-                    scatterPlot.onload = function () {
-                        const scatter2Script = document.createElement("script");
-                        scatter2Script.src = "scatter-plot2.js";
-                        document.body.appendChild(scatter2Script);
-                    };
-                };
+            const script = document.createElement("script");
+            script.src = scripts[index];
+            script.onload = function () {
+                loadScript(index + 1);
             };
+            document.body.appendChild(script);
+            }
+
+            loadScript(0);
         });
     </script>
 </body>
