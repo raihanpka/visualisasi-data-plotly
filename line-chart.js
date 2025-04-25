@@ -1,4 +1,4 @@
-  function makeplot() {
+function makeplot() {
     Plotly.d3.csv("https://raw.githubusercontent.com/raihanpka/visualisasi-data-plotly/refs/heads/master/DataTanamanPadi.csv", 
       function(data){ processData(data) } );
   };
@@ -22,7 +22,7 @@ function processData(allRows) {
     mode: 'lines+markers',
     type: 'scatter',
     name: province,
-    line: { width: 2 },
+    line: { width: 2 }, 
     marker: { size: 8 }
   }));
 
@@ -34,9 +34,9 @@ function makePlotly(traces, groupedData) {
   const width = plotDiv.clientWidth;
   const height = plotDiv.clientHeight;
   const layout = {
-    title: { text: 'Grafik Produksi Berdasarkan Provinsi di Pulau Sumatera (Tahun 1993 - 2020)' },
+    title: { text: 'Grafik Produksi Padi Berdasarkan Provinsi di Pulau Sumatera (Tahun 1993 - 2020)' },
     xaxis: { title: 'Tahun', tickmode: 'linear' },
-    yaxis: { title: 'Produksi (ton)' },
+    yaxis: { title: 'Produksi Padi (ton)' },
     showlegend: true,
     annotations: [],
     autosize: true,

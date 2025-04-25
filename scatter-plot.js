@@ -25,7 +25,7 @@ function processData(allRows) {
     marker: { size: 12 }
   }));
 
-  // Regression line trace
+  // Membuat garis regresi
   const xData = allRows.map(row => parseFloat(row['Luas Panen']));
   const yData = allRows.map(row => parseFloat(row['Produksi']));
 
@@ -59,9 +59,9 @@ function processData(allRows) {
 function makePlotly(traces) {
   const plotDiv = document.getElementById("scatter");
   const layout = {
-    title: { text: 'Hubungan Luas Panen dengan Hasil Produksi di Pulau Sumatera (Tahun 1993-2020)' },
+    title: { text: 'Hubungan Luas Panen dengan Hasil Produksi Padi di Pulau Sumatera (Tahun 1993-2020)' },
     xaxis: { title: 'Luas Panen (ha)' },
-    yaxis: { title: 'Produksi (ton)' },
+    yaxis: { title: 'Produksi Padi (ton)' },
     autosize: true
   };
 

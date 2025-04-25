@@ -32,7 +32,7 @@ function makePlotly(traces) {
     const plotDiv = document.getElementById("bar");
     const layout = {
         title: {
-            text: 'Perbandingan Produksi Antar Provinsi dan Tahun di Pulau Sumatera (Tahun 1993-2020)',
+            text: 'Perbandingan Produksi Padi Antar Provinsi dan Tahun di Pulau Sumatera (Tahun 1993-2020)',
         },
         xaxis: {
             title: 'Tahun',
@@ -43,7 +43,7 @@ function makePlotly(traces) {
         },
         yaxis: {
             title: {
-                text: 'Produksi (ton)',
+                text: 'Produksi Padi (ton)',
                 font: {
                     size: 16,
                     color: 'rgb(107, 107, 107)'

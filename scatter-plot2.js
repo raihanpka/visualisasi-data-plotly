@@ -25,7 +25,7 @@ function processData(allRows) {
     marker: { size: 12 }
   }));
 
-    // Regression line trace
+    // Membuat garis regresi
     const xData = allRows.map(row => parseFloat(row['Curah Hujan']));
     const yData = allRows.map(row => parseFloat(row['Produksi']));
   
@@ -59,9 +59,9 @@ function processData(allRows) {
 function makePlotly(traces) {
   const plotDiv = document.getElementById("scatter2");
   const layout = {
-    title: { text: 'Hubungan Curah Hujan dengan Hasil Produksi di Pulau Sumatera (Tahun 1993-2020)' },
+    title: { text: 'Hubungan Curah Hujan dengan Hasil Produksi Padi di Pulau Sumatera (Tahun 1993-2020)' },
     xaxis: { title: 'Curah Hujan' },
-    yaxis: { title: 'Produksi (ton)' },
+    yaxis: { title: 'Produksi Padi (ton)' },
     autosize: true
   };
 
