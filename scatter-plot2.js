@@ -33,10 +33,11 @@ function makePlotly(traces) {
   const layout = {
     title: { text: 'Hubungan Luas Panen dengan Hasil Produksi di Pulau Sumatera (Tahun 1993-2020)' },
     xaxis: { title: 'Luas Panen (ha)' },
-    yaxis: { title: 'Produksi (ton)' }
+    yaxis: { title: 'Produksi (ton)' },
+    autosize: true
   };
 
-  Plotly.newPlot(plotDiv, traces, layout);
+  Plotly.newPlot(plotDiv, traces, layout, {responsive: true});
 }
 
 makeplot();

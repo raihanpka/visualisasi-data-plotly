@@ -62,10 +62,11 @@ function makePlotly(traces) {
         },
         barmode: 'stack',
         bargap: 0.15,
-        bargroupgap: 0.1
+        bargroupgap: 0.1,
+        autosize: true
     };
 
-    Plotly.newPlot(plotDiv, traces, layout);
+    Plotly.newPlot(plotDiv, traces, layout, {responsive: true});
 }
 
 makeplot();

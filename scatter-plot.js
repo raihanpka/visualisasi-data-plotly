@@ -33,10 +33,11 @@ function makePlotly(traces) {
   const layout = {
     title: { text: 'Hubungan Curah Hujan dengan Hasil Produksi di Pulau Sumatera (Tahun 1993-2020)' },
     xaxis: { title: 'Curah Hujan' },
-    yaxis: { title: 'Produksi (ton)' }
+    yaxis: { title: 'Produksi (ton)' },
+    autosize: true
   };
 
-  Plotly.newPlot(plotDiv, traces, layout);
+  Plotly.newPlot(plotDiv, traces, layout, {responsive: true});
 }
 
 makeplot();

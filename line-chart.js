@@ -31,15 +31,20 @@ function processData(allRows) {
 
 function makePlotly(traces, groupedData) {
   const plotDiv = document.getElementById("line");
+  const width = plotDiv.clientWidth;
+  const height = plotDiv.clientHeight;
   const layout = {
     title: { text: 'Grafik Produksi Berdasarkan Provinsi di Pulau Sumatera (Tahun 1993 - 2020)' },
     xaxis: { title: 'Tahun', tickmode: 'linear' },
     yaxis: { title: 'Produksi (ton)' },
     showlegend: true,
-    annotations: []
+    annotations: [],
+    autosize: true,
+    width: width,
+    height: height
   };
 
-  Plotly.newPlot(plotDiv, traces, layout);
+  Plotly.newPlot(plotDiv, traces, layout, {responsive: true});
 }
 
 makeplot();

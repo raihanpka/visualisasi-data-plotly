@@ -6,18 +6,20 @@
     <script src="https://cdn.plot.ly/plotly-3.0.1.min.js" charset="utf-8"></script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js" charset="utf-8"></script>
     <title>Project Visualisasi Data - GKV</title>
+    <link rel="stylesheet" href="style/style.css" />
 </head>
 <body>
-    <div id="line" style="width: 1000px; height: 700px; margin: 0 auto;"></div>
-    <br />
-    <br />
-    <div id="bar" style="width: 1000px; height: 700px; margin: 0 auto;"></div>
-    <br />
-    <br />
-    <div id="scatter" style="width: 1000px; height: 700px; margin: 0 auto;"></div>
-    <br />
-    <br />
-    <div id="scatter2" style="width: 1000px; height: 700px; margin: 0 auto;"></div>
+    <header>
+        <h1>Project Visualisasi Data</h1>
+        <h1>Grafika Komputer dan Visualisasi</h1>
+        <h3>Kelompok 9 - K3 </h3>
+    </header>
+    <div class="charts-wrapper">
+        <div id="line" class="chart-container"></div>
+        <div id="bar" class="chart-container"></div>
+        <div id="scatter" class="chart-container"></div>
+        <div id="scatter2" class="chart-container"></div>
+    </div>
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
