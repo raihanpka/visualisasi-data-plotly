@@ -47,7 +47,7 @@ function processData(allRows) {
       y: [slope * Math.min(...xData) + intercept, slope * Math.max(...xData) + intercept],
       mode: 'lines',
       type: 'scatter',
-      name: 'Regression Line',
+      name: 'Garis Regresi',
       line: { color: 'red' }
     };
   
