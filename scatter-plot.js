@@ -31,8 +31,8 @@
   function makePlotly(traces) {
     const plotDiv = document.getElementById("scatter");
     const layout = {
-      title: { text: 'Hubungan Luas Lahan dengan Hasil Produksi' },
-      xaxis: { title: 'Luas Lahan (ha)' },
+      title: { text: 'Hubungan Luas Panen dengan Hasil Produksi' },
+      xaxis: { title: 'Luas Panen (ha)' },
       yaxis: { title: 'Produksi (ton)' }
     };
   
