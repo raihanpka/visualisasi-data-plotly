@@ -16,14 +16,13 @@ header h1 {
 }
 .chart-container {
     align-items: center;
-    width: 100%;
-    max-width: 1100px;
+    width: 90%;
+    max-width: 1000px;
     height: 800px;
     margin: 0 auto 40px auto;
     background: white;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    border-radius: 8px;
-    padding: 15px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    padding: auto;
     box-sizing: border-box;
 }
 .charts-wrapper {
